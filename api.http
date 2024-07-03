@@ -1,5 +1,5 @@
-@server = http://localhost.8000
-@player_id = 1
+@server = http://localhost:8000
+@player_id = 9
 ### 전체 선수 조회
 GET {{server}}/players
 

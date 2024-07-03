@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘 하루 보지 않기</title>
+  <script>
+    function setHidePopupCookie() {
+      document.cookie = "hidePopup=true; max-age=86400; path=/"; // 1일 동안 유효한 쿠키
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+  <% if (!hidePopup) { %>
+    <div id="popup" style="border: 1px solid black; padding: 20px; width: 300px; background-color: #f0f0f0;">
+      <p>이 팝업 창은 하루 동안 보이지 않습니다.</p>
+      <button onclick="setHidePopupCookie()">오늘 하루 보지 않기</button>
+    </div>
+  <% } %>
+  <h1>메인 페이지 내용</h1>
+</body>
+</html>
